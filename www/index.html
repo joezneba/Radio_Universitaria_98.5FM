@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    
+    
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+  
+
+    <link rel="stylesheet" href="css/leanbackPlayer.default.css"><!--Se agrega el css de leanbanckPlayer-->
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    
+
+    <style type="text/css">
+      .platform-ios .manual-ios-statusbar-padding{
+        padding-top:20px;
+      }
+      .manual-remove-top-padding{
+        padding-top:0px; 
+      }
+      .manual-remove-top-padding .scroll{
+        padding-top:0px !important;
+      }
+      ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+        margin-left:-10px;
+        margin-right:-10px;
+      }
+      ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+        border-radius:0px;
+        border-left:0px;
+        border-right: 0px;
+      }
+      .show-list-numbers-and-dots ul{
+        list-style-type: disc;
+        padding-left:40px;
+      }
+      .show-list-numbers-and-dots ol{
+        list-style-type: decimal;
+        padding-left:40px;
+      }
+    </style>
+    <script type="js/leanbackPlayer.js"></script><!--se agrega el script-->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    
+     
+    <script src="js/directives.js"></script>
+     
+    <script src="js/services.js"></script>
+    <script>
+      function cerrar(){
+        navigator.app.exitApp();
+      }
+    </script>
+
+    <!-- Only required for Tab projects w/ pages in multiple tabs 
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+    -->
+
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7">
+  <div>
+  <ion-side-menus enable-menu-with-back-views="false" data-componentid="side-menu21">
+    <ion-side-menu-content>
+      <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button></ion-nav-back-button>
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+        </ion-nav-buttons>
+      </ion-nav-bar>
+      <ion-nav-view></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" id="side-menu21">
+      <ion-header-bar class="bar-stable">
+        <div class="title">Menu</div>
+      </ion-header-bar>
+      <ion-content ng-controller="menuCtrl" padding="false" class="side-menu-left has-header ">
+        <ion-list id="menu-list2" data-componentid="list2">
+                    <ion-item class="item-divider" id="menu-list-item-divider2" data-componentid="list-item-divider2"> Pagina Institucional</ion-item>
+                   <ion-item class="item-icon-left" id="menu-list-item5" data-componentid="list-item5" href="#" onclick="window.open('http://unl.edu.ec/radio/inicio-radio-universitaria', '_self'); return false;">
+                        <i class="icon ion-social-chrome"></i>Radio Universitaria</ion-item>
+                    <ion-item class="item-divider" id="menu-list-item-divider1" data-componentid="list-item-divider1" >Redes Sociales</ion-item>
+                    <ion-item class="item-icon-left" id="menu-list-item2" data-componentid="list-item2" href="#" onclick="window.open('https://www.facebook.com/universitaria98.5/', '_self'); return false;" >
+                        <i class="icon ion-social-facebook"></i>Facebook</ion-item>
+                    <ion-item class="item-icon-left" id="menu-list-item3" data-componentid="list-item3" href="#" onclick="window.open('https://twitter.com/radiounl', '_self'); return false;"  >
+                        <i class="icon ion-social-twitter"></i>Twitter</ion-item>
+                    <ion-item >
+                      <button class="button icon-left ion-close-circled button-dark" onclick="cerrar()">Salir</button>
+                    </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu>
+  </ion-side-menus>
+</div>
+  </body>
+</html>
